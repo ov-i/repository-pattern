@@ -1,0 +1,53 @@
+{
+  "name": "ov-i/repository-pattern",
+  "type": "library",
+  "version": "1.0.0",
+  "description": "Repository Pattern Implementation for future projects",
+  "require": {
+    "php": "^8.3",
+    "illuminate/contracts": ">=v12.43.0",
+    "illuminate/support": ">=12.43.0",
+    "illuminate/events": ">=12.43.0",
+    "illuminate/database": "^v12.43.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=12.5.0",
+    "friendsofphp/php-cs-fixer": "^3.93",
+    "phpstan/phpstan": "^2.1"
+  },
+  "authors": [
+    {
+      "name": "ov-i",
+      "email": "ov@ov-ctl.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Essentials\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "hooks:install": "git config core.hooksPath .githooks",
+    "test": "vendor/bin/phpunit",
+
+    "cs:check": "vendor/bin/php-cs-fixer fix --ansi --dry-run --diff",
+    "cs:fix": "vendor/bin/php-cs-fixer fix --ansi",
+
+    "stan": "vendor/bin/phpstan analyse --ansi --memory-limit=512M",
+
+    "lint": [
+      "@cs:check",
+      "@stan"
+    ],
+
+    "ci": [
+      "@lint",
+      "@test"
+    ]
+  }
+}

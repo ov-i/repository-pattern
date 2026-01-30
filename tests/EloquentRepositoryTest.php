@@ -123,7 +123,6 @@ final class EloquentRepositoryTest extends TestCase
         $repository->createPublic(['email' => 'y@test.com', 'name' => 'Y']);
 
         $results = $repository->findWhere(['email' => 'x@test.com'])->get();
-xxx
         $this->assertCount(1, $results);
         $this->assertSame('X', $results->first()->name);
     }

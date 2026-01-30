@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ ! -d vendor ]; then
+  echo "vendor/ missing. Run: composer install"
+  exit 1
+fi
+
+composer ci

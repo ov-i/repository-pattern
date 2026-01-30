@@ -1,3 +1,5 @@
+[![CI](https://github.com/ov-i/repository-pattern/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ov-i/repository-pattern/actions/workflows/ci.yml)
+
 # Repository pattern
 
 I've created a simple library for my future projects to make my life easier.

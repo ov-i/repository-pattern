@@ -2,13 +2,14 @@
   "name": "ov-i/repository-pattern",
   "type": "library",
   "license": "MIT",
+  "version": "1.0.0",
   "description": "Repository Pattern Implementation for future projects",
   "require": {
-    "php": "^8.3",
-    "illuminate/contracts": "^12.43",
-    "illuminate/support": "^12.43",
-    "illuminate/events": "^12.43",
-    "illuminate/database": "^12.43"
+    "php": "^8.3 || ^8.4",
+    "illuminate/contracts": "^12.0",
+    "illuminate/support": "^12.0",
+    "illuminate/events": "^12.0",
+    "illuminate/database": "^12.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^12.5",
